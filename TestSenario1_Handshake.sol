@@ -27,7 +27,6 @@ contract Test_Scenario1_Handshake is Scenario1_Handshake {
   }
 
   function test_AwardToken() {
-    //contractAddress = msg.sender;
     assert(tasks[1].isAwarded == false);
     awardToken(1);
     assert(tasks[1].isAwarded == true);
