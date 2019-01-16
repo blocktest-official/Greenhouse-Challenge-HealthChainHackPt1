@@ -4,7 +4,7 @@
     5 functions to ensure Scenario1 - Handshake
 */
 
-pragma solidity ^0.4.21;
+pragma solidity ^0.4.25;
 contract Scenario1_Handshake {
     struct task {
         bool isPresent;
@@ -111,7 +111,7 @@ contract Scenario1_Handshake {
         require(_taskId != 0, "TaskID is required");
         // ensuring that contract is invoking this function
         require(msg.sender == contractAddress, "Unauthorized user");
-        // ensuring that the task is valid 
+        // ensuring that the task is valid
         require(tasks[_taskId].isPresent, "Invalid taskId");
         // ensuring that the contract is confirmed
         require(tasks[_taskId].isConfirmed, "Result not confirmed");
